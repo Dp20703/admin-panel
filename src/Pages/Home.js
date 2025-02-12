@@ -16,10 +16,9 @@ const Home = () => {
 
 function Main() {
     return (
-        <div>
-            &lt;&gt;
+        <>
             <div className="right_col" role="main">
-                {'{'}/* {/* top tiles */} */{'}'}
+                 {/* top tiles */}
                 <div className="row" style={{ display: 'inline-block' }}>
                     <div className="tile_count">
                         <div className="col-md-2 col-sm-4  tile_stats_count">
@@ -54,7 +53,7 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                {'{'}/* {/* /top tiles */} */{'}'}
+               {/* /top tiles */} 
                 <div className="row">
                     <div className="col-md-12 col-sm-12 ">
                         <div className="dashboard_graph">
@@ -657,12 +656,12 @@ function Main() {
                                     </div>
                                 </div>
                             </div>
-                            {'{'}/* {/* end of weather widget */} */{'}'}
+                            {/* end of weather widget */} 
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </>
 
     );
 }
