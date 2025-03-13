@@ -12,7 +12,7 @@ function Main() {
         <>
             <footer>
                 <div className="pull-right">
-                    Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com/">Colorlib</a>
+                    Renting Properties
                 </div>
                 <div className="clearfix" />
             </footer>
