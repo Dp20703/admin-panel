@@ -5,6 +5,7 @@ import Profile from "./Pages/Profile";
 import ManageProperites from "./Pages/ManageProperites";
 import ManageUsers from "./Pages/ManageUsers";
 import ManageOwners from "./Pages/ManageOwners";
+import Feedback from "./Pages/Feedback";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/feedback" element={<Feedback />} />
           <Route path="/manage_users" element={<ManageUsers />} />
           <Route path="/manage_owners" element={<ManageOwners />} />
           <Route path="/manage_properties" element={<ManageProperites />} />
