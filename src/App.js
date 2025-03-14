@@ -3,6 +3,8 @@ import Home from "./Pages/Home";
 import Login from "./Pages/Login";
 import Profile from "./Pages/Profile";
 import ManageProperites from "./Pages/ManageProperites";
+import ManageUsers from "./Pages/ManageUsers";
+import ManageOwners from "./Pages/ManageOwners";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/manage_users" element={<ManageUsers />} />
+          <Route path="/manage_owners" element={<ManageOwners />} />
           <Route path="/manage_properties" element={<ManageProperites />} />
         </Routes>
       </BrowserRouter>

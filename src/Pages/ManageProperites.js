@@ -78,12 +78,23 @@ function Main() {
 
     return (
         <div className="right_col" role="main">
-            <div className>
-                <div className="page-title">
+            <div>
+            <div className="page-title">
                     <div className="title_left">
-                        <h3>Properties <small>Details</small></h3>
+                        <h3>Manage Properites <small>Details</small></h3>
+                    </div>
+                    <div className="title_right">
+                        <div className="col-md-5 col-sm-5 form-group pull-right top_search">
+                            <div className="input-group">
+                                <input type="text" className="form-control" placeholder="Search properites..." />
+                                <span className="input-group-btn">
+                                    <button className="btn btn-secondary" type="button">Go!</button>
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <div className="clearfix" />
                 <div className="row">
                     <div className="col-md-12">
