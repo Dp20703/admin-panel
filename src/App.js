@@ -7,6 +7,7 @@ import ManageUsers from "./Pages/ManageUsers";
 import ManageOwners from "./Pages/ManageOwners";
 import Feedback from "./Pages/Feedback";
 import Complains from "./Pages/Complains";
+import Payments from "./Pages/Payments";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile" element={<Profile />} />
+          <Route path="/view_payments" element={<Payments />} />
           <Route path="/manage_feedbacks" element={<Feedback />} />
           <Route path="/manage_complains" element={<Complains />} />
           <Route path="/manage_users" element={<ManageUsers />} />
