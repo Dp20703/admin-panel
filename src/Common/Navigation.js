@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Navigation = () => {
     return (
@@ -21,13 +22,8 @@ function Main() {
                                     <img src="images/img.jpg" alt="" />Admin
                                 </a>
                                 <div className="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
-                                    <a className="dropdown-item" href="javascript:;"> Profile</a>
-                                    <a className="dropdown-item" href="javascript:;">
-                                        <span className="badge bg-red pull-right">50%</span>
-                                        <span>Settings</span>
-                                    </a>
-                                    <a className="dropdown-item" href="javascript:;">Help</a>
-                                    <a className="dropdown-item" href="login.html"><i className="fa fa-sign-out pull-right"></i> Log Out</a>
+                                    <Link className="dropdown-item" to={"/profile"}> Profile</Link>
+                                    <Link className="dropdown-item" to={"/login"}><i className="fa fa-sign-out pull-right"></i> Log Out</Link>
                                 </div>
                             </li>
 

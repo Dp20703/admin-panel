@@ -1,29 +1,39 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Slider = () => {
     return (
         <>
             <Main />
         </>
-    )
-}
+    );
+};
 
 function Main() {
+    // State for managing which menu is open
+    const [openMenu, setOpenMenu] = useState(null);
+
+    // Function to toggle submenu
+    const toggleSubmenu = (menuName) => {
+        setOpenMenu(openMenu === menuName ? null : menuName);
+    };
 
     return (
         <>
             <div className="col-md-3 left_col">
                 <div className="left_col scroll-view">
                     <div className="navbar nav_title" style={{ border: "0" }}>
-                        <Link to={'/'} className="site_title"><span>Admin Dashboard</span></Link>
+                        <Link to={"/"} className="site_title">
+                            <span>Admin Dashboard</span>
+                        </Link>
                     </div>
                     <div className="clearfix"></div>
 
-                    {/* <!-- menu profile quick info --> */}
+                    {/* Profile Info */}
                     <div className="profile clearfix">
                         <div className="profile_pic">
-                            <Link to={"/profile"}> <img src="images/img.jpg" alt="..." className="img-circle profile_img" />
+                            <Link to={"/profile"}>
+                                <img src="images/img.jpg" alt="..." className="img-circle profile_img" />
                             </Link>
                         </div>
                         <div className="profile_info">
@@ -31,34 +41,53 @@ function Main() {
                             <h2>Admin</h2>
                         </div>
                     </div>
-                    {/* <!-- /menu profile quick info --> */}
                     <br />
-                    {/* <!-- sidebar menu --> */}
+
+                    {/* Sidebar Menu */}
                     <div id="sidebar-menu" className="main_menu_side hidden-print main_menu">
                         <div className="menu_section">
                             <h3>General</h3>
                             <ul className="nav side-menu">
-                                <li><a><i className="fa fa-home"></i> Home <span className="fa fa-chevron-down"></span></a>
-                                    <ul className="nav child_menu">
-                                        <li><a href="index.html">Dashboard</a></li>
-                                        <li><a href="index2.html">Dashboard2</a></li>
-                                        <li><a href="index3.html">Dashboard3</a></li>
+                                {/* Home Menu */}
+                                <li>
+                                    <a href="#" onClick={() => toggleSubmenu("home")}>
+                                        <i className="fa fa-home"></i> Home
+                                        <span className={`fa ${openMenu === "home" ? "fa-chevron-up" : "fa-chevron-down"}`}></span>
+                                    </a>
+                                    <ul className={`nav child_menu ${openMenu === "home" ? "d-block" : "d-none"}`}>
+                                        <li><Link to="/">Dashboard</Link></li>
+                                        <li><Link to="/dashboard2">Dashboard2</Link></li>
+                                        <li><Link to="/dashboard3">Dashboard3</Link></li>
                                     </ul>
                                 </li>
 
-
-                                <li><a><i className="fa fa-table"></i> Tables <span className="fa fa-chevron-down"></span></a>
-                                    <ul className="nav child_menu">
-                                        <li><a href="tables.html">Tables</a></li>
-                                        <li><a href="tables_dynamic.html">Table Dynamic</a></li>
+                                {/* Tables Menu */}
+                                <li>
+                                    <a href="#" onClick={() => toggleSubmenu("tables")}>
+                                        <i className="fa fa-table"></i> Tables
+                                        <span className={`fa ${openMenu === "tables" ? "fa-chevron-up" : "fa-chevron-down"}`}></span>
+                                    </a>
+                                    <ul className={`nav child_menu ${openMenu === "tables" ? "d-block" : "d-none"}`}>
+                                        <li><Link to="/tables">Tables</Link></li>
+                                        <li><Link to="/tables_dynamic">Table Dynamic</Link></li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    <a href="#" onClick={() => toggleSubmenu("manage")}>
+                                        <i className="fa fa-edit"></i> Manage
+                                        <span className={`fa ${openMenu === "manage" ? "fa-chevron-up" : "fa-chevron-down"}`}></span>
+                                    </a>
+                                    <ul className={`nav child_menu ${openMenu === "manage" ? "d-block" : "d-none"}`}>
+                                        <li><Link to="/manage_users">Manage Users</Link></li>
+                                        <li><Link to="/manage_owners">Manage Owners</Link></li>
+                                        <li><Link to="/manage_properties">Manage Properties</Link></li>
                                     </ul>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    {/* <!-- /sidebar menu --> */}
 
-                    {/* <!-- /menu footer buttons --> */}
+                    {/* Footer Buttons */}
                     <div className="sidebar-footer hidden-small">
                         <a data-toggle="tooltip" data-placement="top" title="Settings">
                             <span className="glyphicon glyphicon-cog" aria-hidden="true"></span>
@@ -73,13 +102,10 @@ function Main() {
                             <span className="glyphicon glyphicon-off" aria-hidden="true"></span>
                         </a>
                     </div>
-                    {/* <!-- /menu footer buttons --> */}
                 </div>
             </div>
-
-
         </>
     );
-
 }
-export default Slider
+
+export default Slider;
