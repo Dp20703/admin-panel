@@ -1,8 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 const Slider = () => {
     return (
-        <><Main /></>
+        <>
+            <Main />
+        </>
     )
 }
 
@@ -13,14 +16,15 @@ function Main() {
             <div className="col-md-3 left_col">
                 <div className="left_col scroll-view">
                     <div className="navbar nav_title" style={{ border: "0" }}>
-                        <a href="index.html" className="site_title"><i className="fa fa-paw"></i> <span>Admin</span></a>
+                        <Link to={'/'} className="site_title"><span>Admin Dashboard</span></Link>
                     </div>
                     <div className="clearfix"></div>
 
                     {/* <!-- menu profile quick info --> */}
                     <div className="profile clearfix">
                         <div className="profile_pic">
-                            <img src="images/img.jpg" alt="..." className="img-circle profile_img" />
+                            <Link to={"/profile"}> <img src="images/img.jpg" alt="..." className="img-circle profile_img" />
+                            </Link>
                         </div>
                         <div className="profile_info">
                             <span>Welcome,</span>
@@ -49,20 +53,8 @@ function Main() {
                                         <li><a href="tables_dynamic.html">Table Dynamic</a></li>
                                     </ul>
                                 </li>
-                                <li><a><i className="fa fa-bar-chart-o"></i> Data Presentation <span className="fa fa-chevron-down"></span></a>
-                                    <ul className="nav child_menu">
-                                        <li><a href="chartjs.html">Chart JS</a></li>
-                                        <li><a href="chartjs2.html">Chart JS2</a></li>
-                                        <li><a href="morisjs.html">Moris JS</a></li>
-                                        <li><a href="echarts.html">ECharts</a></li>
-                                        <li><a href="other_charts.html">Other Charts</a></li>
-                                    </ul>
-                                </li>
-
                             </ul>
                         </div>
-
-
                     </div>
                     {/* <!-- /sidebar menu --> */}
 

@@ -17,6 +17,16 @@ const Home = () => {
 function Main() {
     return (
         <>
+            <Header />
+
+        </>
+
+    );
+}
+
+function Header() {
+    return (
+        <>
             <div className="right_col" role="main">
                 {/* top tiles */}
                 <div className="row" style={{ display: 'inline-block' }}>
@@ -54,9 +64,7 @@ function Main() {
                     </div>
                 </div>
             </div>
-
         </>
-
     );
 }
 

@@ -7,7 +7,6 @@ const Navigation = () => {
 }
 
 function Main() {
-
     return (
         <>
             <div className="top_nav">
