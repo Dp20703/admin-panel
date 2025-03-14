@@ -154,7 +154,7 @@ function Main() {
 
             {/* Profile Modal */}
             {selectedProfile && (
-                <div className="modal-overlay">
+                <div className="modal-overlay" style={{marginBottom:"70px"}}>
                     <div className="modal-content px-5 py-3">
                         <h3>User Profile</h3>
                         <img

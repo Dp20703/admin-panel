@@ -184,7 +184,7 @@ function Main() {
 
             {/* User Account Modal */}
             {selectedUser && (
-                <div className="modal-overlay">
+                <div className="modal-overlay" style={{marginBottom:"70px"}}>
                     <div className="modal-content px-5 py-3">
                         <h3>User Account Details</h3>
                         <p><strong>Name:</strong> {selectedUser.name}</p>
