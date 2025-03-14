@@ -73,6 +73,7 @@ function Main() {
                                     </ul>
                                 </li>
                                 <li>
+                                    {/* Manage Menu */}
                                     <a href="#" onClick={() => toggleSubmenu("manage")}>
                                         <i className="fa fa-edit"></i> Manage
                                         <span className={`fa ${openMenu === "manage" ? "fa-chevron-up" : "fa-chevron-down"}`}></span>
@@ -81,6 +82,8 @@ function Main() {
                                         <li><Link to="/manage_users">Manage Users</Link></li>
                                         <li><Link to="/manage_owners">Manage Owners</Link></li>
                                         <li><Link to="/manage_properties">Manage Properties</Link></li>
+                                        <li><Link to="/manage_feedbacks">Manage Feedbacks</Link></li>
+                                        <li><Link to="/manage_complains">Manage Complains</Link></li>
                                     </ul>
                                 </li>
                             </ul>
