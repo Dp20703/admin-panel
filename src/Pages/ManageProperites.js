@@ -77,8 +77,8 @@ function Main() {
     ];
 
     return (
-        <div className="right_col" role="main">
-            <div>
+        <div className="right_col" role="main" style={{ minHeight: '100vh' }}>
+            <div className='mb-5'>
             <div className="page-title">
                     <div className="title_left">
                         <h3>Manage Properites <small>Details</small></h3>
@@ -94,7 +94,6 @@ function Main() {
                         </div>
                     </div>
                 </div>
-                
                 <div className="clearfix" />
                 <div className="row">
                     <div className="col-md-12">
