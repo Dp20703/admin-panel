@@ -11,7 +11,7 @@ const Footer = () => {
                             <p className="small mb-0">Efficiently manage properties & transactions</p>
                         </div>
                         <div className="col-md-6 text-md-end">
-                            <p className="small mb-0">© {new Date().getFullYear()} Renting Properties. All rights reserved.</p>
+                            <p className="small mb-0">©2025 Renting Properties. All rights reserved.</p>
                         </div>
                     </div>
                 </div>
