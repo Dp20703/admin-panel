@@ -75,11 +75,6 @@ function Main() {
         );
     };
 
-    // Handle deleting a complaint
-    const handleDelete = (id) => {
-        setComplaints(complaints.filter((complaint) => complaint.id !== id));
-    };
-
     // Open user profile modal
     const handleViewAccount = (user) => {
         setSelectedUser(user);
@@ -158,19 +153,13 @@ function Main() {
                                                 </button>
                                             </div>
 
-                                            {/* View Account & Delete Buttons */}
+                                            {/* View Account Button */}
                                             <div className="mt-3">
                                                 <button
                                                     className="btn btn-primary btn-sm"
                                                     onClick={() => handleViewAccount(complaint)}
                                                 >
                                                     View Account
-                                                </button>
-                                                <button 
-                                                    className="btn btn-danger btn-sm ml-2"
-                                                    onClick={() => handleDelete(complaint.id)}
-                                                >
-                                                    Delete Complaint
                                                 </button>
                                             </div>
                                         </div>
