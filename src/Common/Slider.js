@@ -84,6 +84,7 @@ function Main() {
                                         <li><Link to="/manage_properties">Manage Properties</Link></li>
                                         <li><Link to="/manage_feedbacks">Manage Feedbacks</Link></li>
                                         <li><Link to="/manage_complains">Manage Complains</Link></li>
+                                        <li><Link to="/manage_inquiries">Manage Inquiries</Link></li>
                                     </ul>
                                 </li>
                                 {/* Payment Menu */}
