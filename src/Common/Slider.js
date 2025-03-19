@@ -92,7 +92,7 @@ function Main() {
                                         <span className={`fa ${openMenu == "payment" ? "fa-chevron-up" : "fa-chevron-down"}`}></span>
                                     </Link>
                                     <ul className={`nav child_menu ${openMenu == "payment" ? "d-block" : "d-none"}`} >
-                                        <li><Link to={"/view_payments"}>View Payments</Link></li>
+                                        <li><Link to={"/manage_payments"}>Manage Payments</Link></li>
                                     </ul>
                                 </li>
                             </ul>
